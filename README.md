@@ -1,426 +1,290 @@
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-}
-
-body {
-  background: #0d1117;
-  color: #c9d1d9;
-}
-
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-in {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.hero {
-  background: linear-gradient(135deg, rgba(100, 200, 255, 0.1) 0%, rgba(100, 150, 255, 0.05) 100%);
-  border-bottom: 1px solid rgba(100, 200, 255, 0.2);
-  padding: 80px 40px;
-  text-align: center;
-  animation: fade-in 1s ease-out;
-}
-
-.hero h1 {
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: -1.5px;
-  margin-bottom: 12px;
-  background: linear-gradient(90deg, #58a6ff 0%, #79c0ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: fade-in 0.8s ease-out;
-}
-
-.hero p {
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  color: #8b949e;
-  animation: fade-in 1s ease-out 0.2s backwards;
-}
-
-.subtitle {
-  font-size: 16px;
-  color: #8b949e;
-  margin-top: 8px;
-  font-weight: 300;
-  letter-spacing: 0.3px;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 60px 40px;
-}
-
-.section {
-  margin-bottom: 80px;
-  animation: fade-in 1.2s ease-out;
-}
-
-.section-title {
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-  margin-bottom: 32px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid rgba(100, 200, 255, 0.2);
-  color: #f0f6fc;
-}
-
-.subsection {
-  margin-bottom: 32px;
-}
-
-.subsection-title {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: #58a6ff;
-  margin-bottom: 16px;
-}
-
-.tech-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 16px;
-}
-
-.tech-item {
-  padding: 8px 16px;
-  background: rgba(58, 166, 255, 0.1);
-  border: 1px solid rgba(58, 166, 255, 0.3);
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #79c0ff;
-  transition: all 0.3s ease;
-  animation: fade-in 0.8s ease-out backwards;
-}
-
-.tech-item:nth-child(1) { animation-delay: 0s; }
-.tech-item:nth-child(2) { animation-delay: 0.1s; }
-.tech-item:nth-child(3) { animation-delay: 0.2s; }
-.tech-item:nth-child(4) { animation-delay: 0.3s; }
-.tech-item:nth-child(5) { animation-delay: 0.4s; }
-.tech-item:nth-child(6) { animation-delay: 0.5s; }
-
-.tech-item:hover {
-  background: rgba(58, 166, 255, 0.2);
-  border-color: rgba(58, 166, 255, 0.5);
-  transform: translateY(-2px);
-}
-
-.project-card {
-  background: rgba(30, 30, 30, 0.5);
-  border: 1px solid rgba(100, 200, 255, 0.15);
-  border-radius: 8px;
-  padding: 24px;
-  margin-bottom: 16px;
-  transition: all 0.3s ease;
-  animation: fade-in 1s ease-out;
-}
-
-.project-card:hover {
-  background: rgba(30, 30, 30, 0.8);
-  border-color: rgba(100, 200, 255, 0.3);
-  transform: translateY(-4px);
-}
-
-.project-title {
-  font-size: 16px;
-  font-weight: 600;
-  color: #f0f6fc;
-  margin-bottom: 8px;
-}
-
-.project-desc {
-  font-size: 14px;
-  color: #8b949e;
-  margin-bottom: 12px;
-  line-height: 1.5;
-}
-
-.project-link {
-  font-size: 14px;
-  color: #58a6ff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.project-link:hover {
-  color: #79c0ff;
-  text-decoration: underline;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 24px;
-}
-
-.stat-card {
-  background: rgba(30, 30, 30, 0.5);
-  border: 1px solid rgba(100, 200, 255, 0.15);
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  animation: fade-in 1s ease-out;
-}
-
-.stat-number {
-  font-size: 28px;
-  font-weight: 700;
-  color: #58a6ff;
-  margin-bottom: 8px;
-}
-
-.stat-label {
-  font-size: 13px;
-  color: #8b949e;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-}
-
-.link-group {
-  display: flex;
-  gap: 16px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.link-button {
-  padding: 10px 20px;
-  background: rgba(58, 166, 255, 0.1);
-  border: 1px solid rgba(58, 166, 255, 0.3);
-  border-radius: 6px;
-  color: #58a6ff;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.link-button:hover {
-  background: rgba(58, 166, 255, 0.2);
-  border-color: rgba(58, 166, 255, 0.5);
-  transform: translateY(-2px);
-}
-
-.divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(100, 200, 255, 0.2), transparent);
-  margin: 60px 0;
-}
-
-.footer {
-  text-align: center;
-  padding: 40px;
-  border-top: 1px solid rgba(100, 200, 255, 0.1);
-  color: #8b949e;
-  font-size: 14px;
-  animation: fade-in 1.5s ease-out;
-}
-
-.footer p {
-  margin: 8px 0;
-  font-weight: 300;
-  letter-spacing: 0.3px;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 60px 20px;
-  }
+<svg width="100%" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes gradientShift {
+        0% { stop-color: #3a8fff; }
+        50% { stop-color: #79c0ff; }
+        100% { stop-color: #3a8fff; }
+      }
+      @keyframes blur-glow {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.7; }
+      }
+      .glow-text { animation: blur-glow 3s ease-in-out infinite; }
+      .title-text { font-size: 56px; font-weight: 700; fill: url(#grad); letter-spacing: -2px; }
+      .subtitle-text { font-size: 18px; fill: #8b949e; font-weight: 300; letter-spacing: 1px; }
+    </style>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3a8fff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#79c0ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a8fff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#010409;stop-opacity:1" />
+    </linearGradient>
+    <filter id="blur-effect">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" />
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
   
-  .hero h1 {
-    font-size: 36px;
-  }
+  <!-- Animated Background -->
+  <rect width="1200" height="400" fill="url(#bg-grad)"/>
   
-  .container {
-    padding: 40px 20px;
-  }
+  <!-- Animated Gradient Circles (Glass effect) -->
+  <circle cx="200" cy="100" r="150" fill="none" stroke="#3a8fff" stroke-width="2" opacity="0.2" filter="url(#glow)">
+    <animate attributeName="r" from="100" to="200" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="opacity" from="0.3" to="0.1" dur="4s" repeatCount="indefinite" />
+  </circle>
   
-  .section-title {
-    font-size: 24px;
-  }
-}
+  <circle cx="1000" cy="300" r="150" fill="none" stroke="#79c0ff" stroke-width="2" opacity="0.2" filter="url(#glow)">
+    <animate attributeName="r" from="100" to="200" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" from="0.3" to="0.1" dur="5s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Animated Glass Container Background -->
+  <rect x="150" y="80" width="900" height="240" rx="20" fill="rgba(30,30,30,0.3)" stroke="rgba(58,166,255,0.3)" stroke-width="1" opacity="0.6" filter="url(#blur-effect)">
+    <animate attributeName="opacity" from="0.4" to="0.7" dur="3s" repeatCount="indefinite" />
+  </rect>
+  
+  <!-- Main Text -->
+  <text x="600" y="160" text-anchor="middle" class="title-text">Akil</text>
+  <text x="600" y="200" text-anchor="middle" class="subtitle-text">Android & Web Developer</text>
+  <text x="600" y="240" text-anchor="middle" class="subtitle-text" style="font-size: 14px;">Modern Applications • Clean Code • Professional Architecture</text>
+  
+  <!-- Animated Line -->
+  <line x1="300" y1="280" x2="900" y2="280" stroke="url(#grad)" stroke-width="2" opacity="0.5">
+    <animate attributeName="opacity" from="0.3" to="0.7" dur="2s" repeatCount="indefinite" />
+  </line>
+</svg>
 
-</style>
+---
 
-<div class="hero">
-  <h1>Akil</h1>
-  <p class="subtitle">Android & Web Developer</p>
-  <p>Building modern applications with clean code and modern architecture</p>
-</div>
+## About
 
-<div class="container">
-
-<div class="section">
-  <div class="section-title">About</div>
-  <p style="font-size: 15px; line-height: 1.6; color: #c9d1d9;">
 I'm a full-stack developer focused on creating modern, high-performance applications. Currently in Grade 12 while actively developing Android and web applications with emphasis on clean architecture, modern design patterns, and user experience.
-  </p>
-  <p style="font-size: 15px; line-height: 1.6; color: #8b949e; margin-top: 16px;">
+
 My approach combines traditional software engineering principles with modern development practices, using tools like AI for optimization while maintaining focus on code quality and architectural excellence.
-  </p>
-</div>
 
-<div class="divider"></div>
+---
 
-<div class="section">
-  <div class="section-title">Technical Skills</div>
-  
-  <div class="subsection">
-    <div class="subsection-title">Mobile Development</div>
-    <div class="tech-list">
-      <div class="tech-item">Kotlin</div>
-      <div class="tech-item">Android</div>
-      <div class="tech-item">Jetpack Compose</div>
-      <div class="tech-item">MVVM Architecture</div>
-      <div class="tech-item">Room Database</div>
-      <div class="tech-item">Firebase</div>
-    </div>
-  </div>
-  
-  <div class="subsection">
-    <div class="subsection-title">Web Development</div>
-    <div class="tech-list">
-      <div class="tech-item">React</div>
-      <div class="tech-item">JavaScript</div>
-      <div class="tech-item">HTML5</div>
-      <div class="tech-item">CSS3</div>
-      <div class="tech-item">Tailwind CSS</div>
-      <div class="tech-item">Responsive Design</div>
-    </div>
-  </div>
-  
-  <div class="subsection">
-    <div class="subsection-title">Tools & Infrastructure</div>
-    <div class="tech-list">
-      <div class="tech-item">Git</div>
-      <div class="tech-item">GitHub</div>
-      <div class="tech-item">VS Code</div>
-      <div class="tech-item">Android Studio</div>
-      <div class="tech-item">Figma</div>
-      <div class="tech-item">CLI Tools</div>
-    </div>
-  </div>
-</div>
+<svg width="100%" height="60" viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="section-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(58,166,255,0);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(58,166,255,0.4);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(58,166,255,0);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="25" width="1200" height="1" fill="url(#section-grad)"/>
+</svg>
 
-<div class="divider"></div>
+## Technical Skills
 
-<div class="section">
-  <div class="section-title">Featured Projects</div>
-  
-  <div class="project-card">
-    <div class="project-title">Tamil TV</div>
-    <div class="project-desc">
-      An IPTV streaming application built with Kotlin and Jetpack Compose. Features modern UI with smooth performance optimization and user-centric design.
-    </div>
-    <a href="https://github.com/codedbyakil/Tamil-TV" class="project-link">View on GitHub</a>
-  </div>
-  
-  <div class="project-card">
-    <div class="project-title">Your Project Name</div>
-    <div class="project-desc">
-      Web application built with modern technologies. Add your project details here with description and features.
-    </div>
-    <a href="https://github.com/codedbyakil" class="project-link">View on GitHub</a>
-  </div>
-</div>
+### Mobile Development
 
-<div class="divider"></div>
-
-<div class="section">
-  <div class="section-title">Learning & Development</div>
-  
-  <div class="subsection">
-    <div class="subsection-title">Currently Focused On</div>
-    <p style="font-size: 14px; line-height: 1.6; color: #c9d1d9; margin-bottom: 16px;">
-      Advanced Jetpack Compose patterns and animations, MVVM and Clean Architecture implementation, React hooks and state management, Performance optimization for mobile and web applications
-    </p>
-  </div>
-  
-  <div class="subsection">
-    <div class="subsection-title">Next Learning Goals</div>
-    <p style="font-size: 14px; line-height: 1.6; color: #8b949e;">
-      Backend development fundamentals, System design and architecture, Advanced security practices, DevOps and deployment strategies, Machine learning integration
-    </p>
-  </div>
-</div>
-
-<div class="divider"></div>
-
-<div class="section">
-  <div class="section-title">Statistics</div>
-  
-  <div style="margin-top: 24px;">
-    <a href="https://github.com/codedbyakil" style="text-decoration: none;">
-      <img src="https://github-readme-stats.vercel.app/api?username=codedbyakil&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=8b949e&icon_color=79c0ff&hide_border=true" alt="GitHub Stats" style="width: 100%; max-width: 500px; border-radius: 8px; margin-bottom: 20px;">
-    </a>
+<svg width="100%" height="50" viewBox="0 0 600 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="tech-blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+    </filter>
+  </defs>
+  <g id="tech-items">
+    <rect x="10" y="10" width="80" height="30" rx="6" fill="rgba(58,166,255,0.15)" stroke="rgba(58,166,255,0.4)" stroke-width="1" filter="url(#tech-blur)">
+      <animate attributeName="fill" from="rgba(58,166,255,0.15)" to="rgba(58,166,255,0.25)" dur="2s" repeatCount="indefinite" />
+    </rect>
+    <text x="50" y="30" text-anchor="middle" font-size="12" font-weight="600" fill="#79c0ff">Kotlin</text>
     
-    <a href="https://github.com/codedbyakil" style="text-decoration: none;">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=codedbyakil&layout=compact&theme=tokyonight&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=8b949e&hide_border=true" alt="Top Languages" style="width: 100%; max-width: 500px; border-radius: 8px;">
-    </a>
-  </div>
-</div>
+    <rect x="100" y="10" width="80" height="30" rx="6" fill="rgba(58,166,255,0.15)" stroke="rgba(58,166,255,0.4)" stroke-width="1" filter="url(#tech-blur)">
+      <animate attributeName="fill" from="rgba(58,166,255,0.15)" to="rgba(58,166,255,0.25)" dur="2.2s" repeatCount="indefinite" />
+    </rect>
+    <text x="140" y="30" text-anchor="middle" font-size="12" font-weight="600" fill="#79c0ff">Android</text>
+    
+    <rect x="190" y="10" width="120" height="30" rx="6" fill="rgba(58,166,255,0.15)" stroke="rgba(58,166,255,0.4)" stroke-width="1" filter="url(#tech-blur)">
+      <animate attributeName="fill" from="rgba(58,166,255,0.15)" to="rgba(58,166,255,0.25)" dur="2.4s" repeatCount="indefinite" />
+    </rect>
+    <text x="250" y="30" text-anchor="middle" font-size="12" font-weight="600" fill="#79c0ff">Jetpack Compose</text>
+    
+    <rect x="320" y="10" width="100" height="30" rx="6" fill="rgba(58,166,255,0.15)" stroke="rgba(58,166,255,0.4)" stroke-width="1" filter="url(#tech-blur)">
+      <animate attributeName="fill" from="rgba(58,166,255,0.15)" to="rgba(58,166,255,0.25)" dur="2.6s" repeatCount="indefinite" />
+    </rect>
+    <text x="370" y="30" text-anchor="middle" font-size="12" font-weight="600" fill="#79c0ff">MVVM Arch</text>
+    
+    <rect x="430" y="10" width="80" height="30" rx="6" fill="rgba(58,166,255,0.15)" stroke="rgba(58,166,255,0.4)" stroke-width="1" filter="url(#tech-blur)">
+      <animate attributeName="fill" from="rgba(58,166,255,0.15)" to="rgba(58,166,255,0.25)" dur="2.8s" repeatCount="indefinite" />
+    </rect>
+    <text x="470" y="30" text-anchor="middle" font-size="12" font-weight="600" fill="#79c0ff">Firebase</text>
+  </g>
+</svg>
 
-<div class="divider"></div>
+### Web Development
 
-<div class="section">
-  <div class="section-title">Connect</div>
-  
-  <p style="font-size: 15px; color: #c9d1d9; margin-bottom: 24px;">
-    Get in touch or follow my work across different platforms.
-  </p>
-  
-  <div class="link-group">
-    <a href="https://codedbyakil.github.io" class="link-button">Portfolio</a>
-    <a href="https://instagram.com/justdeploy" class="link-button">Instagram</a>
-    <a href="mailto:akilaskan@gmail.com" class="link-button">Email</a>
-    <a href="https://github.com/codedbyakil" class="link-button">GitHub</a>
-  </div>
-</div>
+<svg width="100%" height="50" viewBox="0 0 600 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="tech-blur2">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+    </filter>
+  </defs>
+  <g id="tech-items2">
+    <rect x="10" y="10" width="80" height="30" rx="6" fill="rgba(58,166,255,0.15)" stroke="rgba(58,166,255,0.4)" stroke-width="1" filter="url(#tech-blur2)">
+      <animate attributeName="fill" from="rgba(58,166,255,0.15)" to="rgba(58,166,255,0.25)" dur="2s" repeatCount="indefinite" />
+    </rect>
+    <text x="50" y="30" text-anchor="middle" font-size="12" font-weight="600" fill="#79c0ff">React</text>
+    
+    <rect x="100" y="10" width="100" height="30" rx="6" fill="rgba(58,166,255,0.15)" stroke="rgba(58,166,255,0.4)" stroke-width="1" filter="url(#tech-blur2)">
+      <animate attributeName="fill" from="rgba(58,166,255,0.15)" to="rgba(58,166,255,0.25)" dur="2.2s" repeatCount="indefinite" />
+    </rect>
+    <text x="150" y="30" text-anchor="middle" font-size="12" font-weight="600" fill="#79c0ff">JavaScript</text>
+    
+    <rect x="210" y="10" width="80" height="30" rx="6" fill="rgba(58,166,255,0.15)" stroke="rgba(58,166,255,0.4)" stroke-width="1" filter="url(#tech-blur2)">
+      <animate attributeName="fill" from="rgba(58,166,255,0.15)" to="rgba(58,166,255,0.25)" dur="2.4s" repeatCount="indefinite" />
+    </rect>
+    <text x="250" y="30" text-anchor="middle" font-size="12" font-weight="600" fill="#79c0ff">HTML5</text>
+    
+    <rect x="300" y="10" width="80" height="30" rx="6" fill="rgba(58,166,255,0.15)" stroke="rgba(58,166,255,0.4)" stroke-width="1" filter="url(#tech-blur2)">
+      <animate attributeName="fill" from="rgba(58,166,255,0.15)" to="rgba(58,166,255,0.25)" dur="2.6s" repeatCount="indefinite" />
+    </rect>
+    <text x="340" y="30" text-anchor="middle" font-size="12" font-weight="600" fill="#79c0ff">CSS3</text>
+    
+    <rect x="390" y="10" width="120" height="30" rx="6" fill="rgba(58,166,255,0.15)" stroke="rgba(58,166,255,0.4)" stroke-width="1" filter="url(#tech-blur2)">
+      <animate attributeName="fill" from="rgba(58,166,255,0.15)" to="rgba(58,166,255,0.25)" dur="2.8s" repeatCount="indefinite" />
+    </rect>
+    <text x="450" y="30" text-anchor="middle" font-size="12" font-weight="600" fill="#79c0ff">Tailwind CSS</text>
+  </g>
+</svg>
 
-</div>
+### Tools & Infrastructure
 
-<div class="footer">
-  <p>Building modern applications with clean code</p>
-  <p style="font-size: 13px; margin-top: 12px;">Grade 12 Student | Full-Stack Developer | June 2026</p>
-</div>
+<svg width="100%" height="50" viewBox="0 0 600 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="tech-blur3">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+    </filter>
+  </defs>
+  <g id="tech-items3">
+    <rect x="10" y="10" width="80" height="30" rx="6" fill="rgba(58,166,255,0.15)" stroke="rgba(58,166,255,0.4)" stroke-width="1" filter="url(#tech-blur3)">
+      <animate attributeName="fill" from="rgba(58,166,255,0.15)" to="rgba(58,166,255,0.25)" dur="2s" repeatCount="indefinite" />
+    </rect>
+    <text x="50" y="30" text-anchor="middle" font-size="12" font-weight="600" fill="#79c0ff">Git</text>
+    
+    <rect x="100" y="10" width="80" height="30" rx="6" fill="rgba(58,166,255,0.15)" stroke="rgba(58,166,255,0.4)" stroke-width="1" filter="url(#tech-blur3)">
+      <animate attributeName="fill" from="rgba(58,166,255,0.15)" to="rgba(58,166,255,0.25)" dur="2.2s" repeatCount="indefinite" />
+    </rect>
+    <text x="140" y="30" text-anchor="middle" font-size="12" font-weight="600" fill="#79c0ff">GitHub</text>
+    
+    <rect x="190" y="10" width="80" height="30" rx="6" fill="rgba(58,166,255,0.15)" stroke="rgba(58,166,255,0.4)" stroke-width="1" filter="url(#tech-blur3)">
+      <animate attributeName="fill" from="rgba(58,166,255,0.15)" to="rgba(58,166,255,0.25)" dur="2.4s" repeatCount="indefinite" />
+    </rect>
+    <text x="230" y="30" text-anchor="middle" font-size="12" font-weight="600" fill="#79c0ff">VS Code</text>
+    
+    <rect x="280" y="10" width="120" height="30" rx="6" fill="rgba(58,166,255,0.15)" stroke="rgba(58,166,255,0.4)" stroke-width="1" filter="url(#tech-blur3)">
+      <animate attributeName="fill" from="rgba(58,166,255,0.15)" to="rgba(58,166,255,0.25)" dur="2.6s" repeatCount="indefinite" />
+    </rect>
+    <text x="340" y="30" text-anchor="middle" font-size="12" font-weight="600" fill="#79c0ff">Android Studio</text>
+    
+    <rect x="410" y="10" width="80" height="30" rx="6" fill="rgba(58,166,255,0.15)" stroke="rgba(58,166,255,0.4)" stroke-width="1" filter="url(#tech-blur3)">
+      <animate attributeName="fill" from="rgba(58,166,255,0.15)" to="rgba(58,166,255,0.25)" dur="2.8s" repeatCount="indefinite" />
+    </rect>
+    <text x="450" y="30" text-anchor="middle" font-size="12" font-weight="600" fill="#79c0ff">Figma</text>
+  </g>
+</svg>
+
+---
+
+<svg width="100%" height="60" viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="section-grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(58,166,255,0);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(58,166,255,0.4);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(58,166,255,0);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="25" width="1200" height="1" fill="url(#section-grad2)"/>
+</svg>
+
+## Featured Projects
+
+### Tamil TV
+**Android Application** | Kotlin, Jetpack Compose
+
+An IPTV streaming application built with Kotlin and Jetpack Compose. Features modern UI with smooth performance optimization and user-centric design.
+
+[View on GitHub](https://github.com/codedbyakil/Tamil-TV)
+
+### Your Project Name
+**Web Application** | React, JavaScript
+
+Web application built with modern technologies. Add your project details here with description and features.
+
+[View on GitHub](https://github.com/codedbyakil)
+
+---
+
+<svg width="100%" height="60" viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="section-grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(58,166,255,0);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(58,166,255,0.4);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(58,166,255,0);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="25" width="1200" height="1" fill="url(#section-grad3)"/>
+</svg>
+
+## Learning & Development
+
+**Currently Focused On**
+
+Advanced Jetpack Compose patterns and animations, MVVM and Clean Architecture implementation, React hooks and state management, Performance optimization for mobile and web applications
+
+**Next Learning Goals**
+
+Backend development fundamentals, System design and architecture, Advanced security practices, DevOps and deployment strategies, Machine learning integration
+
+---
+
+<svg width="100%" height="60" viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="section-grad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(58,166,255,0);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(58,166,255,0.4);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(58,166,255,0);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="25" width="1200" height="1" fill="url(#section-grad4)"/>
+</svg>
+
+## Statistics
+
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=codedbyakil&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=8b949e&icon_color=79c0ff&hide_border=true)](https://github.com/codedbyakil)
+
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=codedbyakil&layout=compact&theme=tokyonight&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=8b949e&hide_border=true)](https://github.com/codedbyakil)
+
+---
+
+<svg width="100%" height="60" viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="section-grad5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(58,166,255,0);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(58,166,255,0.4);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(58,166,255,0);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="25" width="1200" height="1" fill="url(#section-grad5)"/>
+</svg>
+
+## Connect
+
+[Portfolio](https://codedbyakil.github.io) | [Instagram](https://instagram.com/justdeploy) | [Email](mailto:akilaskan@gmail.com) | [GitHub](https://github.com/codedbyakil)
+
+---
+
+Building modern applications with clean code  
+Grade 12 Student | Full-Stack Developer | 2026
