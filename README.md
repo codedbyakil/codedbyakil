@@ -1,6 +1,6 @@
 <div align="center">
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=32&duration=3000&pause=500&color=00D9FF&center=true&vCenter=true&width=900&height=70&lines=🚀+Android+%26+Web+Developer;Building+Modern+Apps+with+AI;Grade+12+%7C+Full-Stack+Enthusiast)
+![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=32&duration=3000&pause=500&color=00D9FF&center=true&vCenter=true&width=900&height=70&lines=👋+Hey+I'm+Akil;Android+%26+Web+Developer;Building+Modern+Apps+with+Clean+Code;Grade+12+%7C+Full-Stack+Developer)
 
 </div>
 
@@ -16,26 +16,27 @@
 
 <img align="right" src="https://media.giphy.com/media/M9kDKDMDI92fV8iyYf/giphy.gif" width="300">
 
-```java
-public class Developer {
-    private String name = "Your Name";
-    private String[] skills = {"Android", "Web", "Modern UI"};
-    private String passion = "Building exceptional digital experiences";
-    private String status = "Learning & Growing";
+```kotlin
+class Developer {
+    val name = "Akil"
+    val username = "codedbyakil"
+    val passion = "Building exceptional digital experiences"
+    val currentlyFocused = "Android & Web Development"
     
-    public Developer() {
-        this.useAI = true; // For optimization
-        this.focusOnQuality = true;
+    fun aboutMe() {
+        skills = listOf("Android", "Web", "Modern UI", "Clean Architecture")
+        learning = listOf("MVVM", "Jetpack Compose", "Advanced React")
+        using = "AI for optimization & code generation"
     }
 }
 ```
 
-- 💻 **Android Developer** → Kotlin + Jetpack Compose
-- 🌐 **Website Developer** → React + Modern Web Stack  
-- 📚 **Grade 12 Student** → Balancing academics & passion projects
-- 🎨 **UI/UX Enthusiast** → Material Design 3 & Modern Interfaces
-- 🤖 **AI-Powered Developer** → Code generation + Optimization
-- 🚀 **Always Learning** → Clean Architecture, Best Practices
+- 💻 **Android Developer** → Kotlin + Jetpack Compose + Modern Architecture  
+- 🌐 **Website Developer** → React + JavaScript + Responsive Design  
+- 📚 **Grade 12 Student** → Passionate about tech & continuous learning
+- 🎨 **UI/UX Enthusiast** → Material Design 3 & Modern Interfaces  
+- 🤖 **AI-Powered Workflow** → Code generation, optimization & learning
+- 🚀 **Always Growing** → Clean Architecture, Best Practices, Design Patterns
 
 ---
 
@@ -80,36 +81,36 @@ public class Developer {
 <tr>
 <td width="50%">
 
-### 📱 **[Project One]**
+### 📺 **Tamil TV**
 <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white">
 <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white">
 
-*Modern Android app with beautiful UI*
+*IPTV streaming application for Tamil content*
 
 **Features:**
-- 🎨 Material Design 3
-- 🔐 Authentication system
-- 💾 Local & Cloud storage
-- ⚡ High performance
+- 🎬 Streaming platform
+- 📱 Modern UI/UX
+- ⚡ Smooth performance
+- 🎨 Material Design
 
-[🔗 View Code](https://github.com/yourusername/project)
+[🔗 View Code](https://github.com/codedbyakil/Tamil-TV)
 
 </td>
 <td width="50%">
 
-### 🌐 **[Project Two]**
+### 📱 **Your Project Name**
 <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black">
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black">
 
-*Responsive web application*
+*Description of your web project*
 
 **Features:**
-- 📱 Mobile responsive
+- 📱 Responsive design
 - ⚡ Fast performance
-- 🎨 Modern UI/UX
-- 🔄 Real-time updates
+- 🎨 Modern UI
+- 🔄 Real-time features
 
-[🔗 View Code](https://github.com/yourusername/project) | [🌍 Live](https://yourwebsite.com)
+[🔗 View Code](https://github.com/codedbyakil) | [🌍 Live](https://codedbyakil.github.io)
 
 </td>
 </tr>
@@ -122,18 +123,18 @@ public class Developer {
 <div align="center">
 
 <!-- Main Stats Card -->
-<a href="https://github.com/yourusername">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=8b949e&icon_color=79c0ff" />
+<a href="https://github.com/codedbyakil">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=codedbyakil&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=8b949e&icon_color=79c0ff" />
 </a>
 
 <!-- Languages Card -->
-<a href="https://github.com/yourusername">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=tokyonight&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=8b949e" />
+<a href="https://github.com/codedbyakil">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=codedbyakil&layout=compact&theme=tokyonight&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=8b949e" />
 </a>
 
 <!-- Streak Card -->
-<a href="https://github.com/yourusername">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=yourusername&theme=tokyonight&background=0d1117&border=30363d&ring=58a6ff&fire=ff7b54&currStreakNum=8b949e&currStreakLabel=58a6ff&sideNums=8b949e&sideLabels=58a6ff&dates=8b949e&hide_border=true" />
+<a href="https://github.com/codedbyakil">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=codedbyakil&theme=tokyonight&background=0d1117&border=30363d&ring=58a6ff&fire=ff7b54&currStreakNum=8b949e&currStreakLabel=58a6ff&sideNums=8b949e&sideLabels=58a6ff&dates=8b949e&hide_border=true" />
 </a>
 
 </div>
@@ -146,12 +147,12 @@ public class Developer {
 
 | 🎯 | Achievement | Status |
 |:---:|:---:|:---:|
-| 📱 | **First Android App** | ✅ Complete |
-| 🌐 | **First Website** | ✅ Complete |
-| 🏗️ | **Clean Architecture** | 🔄 Learning |
-| 💡 | **10+ Projects** | 🔄 In Progress |
-| 🤝 | **Open Source Contribution** | 🎯 Soon |
-| 🎓 | **Advanced Development** | 🚀 Upcoming |
+| 📱 | **Android Apps Developed** | ✅ Complete |
+| 🌐 | **Web Projects Created** | ✅ Complete |
+| 🏗️ | **Clean Architecture** | 🔄 Mastering |
+| 💡 | **Multiple Projects** | ✅ Ongoing |
+| 🤝 | **GitHub Contributions** | 🔄 Growing |
+| 🎓 | **Grade 12 + Development** | 🚀 Balancing |
 
 </div>
 
@@ -160,12 +161,13 @@ public class Developer {
 ## 💡 What I'm Currently Doing
 
 ```diff
-+ 🔨 Building production-ready Android apps
-+ 💻 Creating responsive web applications
-+ 📚 Learning advanced architecture patterns
-+ 🤖 Leveraging AI for code optimization
-+ 🎨 Mastering Modern UI/UX design
-+ 📖 Reading clean code & design patterns
++ 🔨 Building production-ready Android applications
++ 💻 Creating responsive web projects
++ 📚 Learning advanced architecture patterns (MVVM, Clean Arch)
++ 🤖 Using AI for code optimization & generation
++ 🎨 Mastering Material Design 3
++ 📖 Studying design patterns & best practices
++ ⚡ Improving performance & code quality
 ```
 
 ---
@@ -177,11 +179,11 @@ public class Developer {
 <td>
 
 **Currently Learning** 📖
-- ✅ MVVM Architecture
 - ✅ Jetpack Compose
+- ✅ MVVM Architecture
 - ✅ Advanced React Hooks
 - 🔄 Coroutines & Flow
-- 🔄 Testing Practices
+- 🔄 Testing Best Practices
 
 </td>
 <td>
@@ -189,9 +191,9 @@ public class Developer {
 **Next Level** 🚀
 - 🎯 Backend Development
 - 🎯 System Design
-- 🎯 DevOps Basics
-- 🎯 Machine Learning
 - 🎯 Advanced Security
+- 🎯 DevOps Basics
+- 🎯 Performance Optimization
 
 </td>
 </tr>
@@ -203,16 +205,16 @@ public class Developer {
 
 ```javascript
 const myAIWorkflow = {
-    codeGeneration: "Accelerate development",
-    optimization: "Improve performance",
-    documentation: "Auto-generate docs",
+    codeGeneration: "Accelerate development speed",
+    optimization: "Improve code quality",
+    documentation: "Generate better docs",
     debugging: "Faster problem solving",
-    learning: "Understanding concepts",
-    focus: "Architecture & Design Decisions" ← Most Important
+    learning: "Understand complex concepts",
+    myFocus: "Architecture & Design Decisions" ← Most Important!
 }
 ```
 
-> ⚡ **AI is my co-pilot, not my replacement** — I focus on architecture, design, and code quality.
+> ⚡ **AI is my co-pilot, not my replacement** — I focus on architecture, design decisions, and code quality.
 
 ---
 
@@ -220,27 +222,26 @@ const myAIWorkflow = {
 
 <div align="center">
 
-![Activity Graph](https://activity-graph.herokuapp.com/graph?username=yourusername&theme=tokyo-night&bg_color=0d1117&color=58a6ff&line=58a6ff&point=79c0ff&area=true&hide_border=true)
+![Activity Graph](https://activity-graph.herokuapp.com/graph?username=codedbyakil&theme=tokyo-night&bg_color=0d1117&color=58a6ff&line=58a6ff&point=79c0ff&area=true&hide_border=true)
 
 </div>
 
 ---
 
-## 🌐 Connect & Follow
+## 🌐 Let's Connect
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=1F1F1F)](https://linkedin.com/in/yourprofile)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white&labelColor=1F1F1F)](https://twitter.com/yourhandle)
-[![Email](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=1F1F1F)](mailto:your.email@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF6B6B?style=for-the-badge&logo=About.me&logoColor=white&labelColor=1F1F1F)](https://yourportfolio.com)
-[![Dev.to](https://img.shields.io/badge/Dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white&labelColor=1F1F1F)](https://dev.to/yourprofile)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF6B6B?style=for-the-badge&logo=About.me&logoColor=white&labelColor=1F1F1F)](https://codedbyakil.github.io)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=1F1F1F)](https://instagram.com/justdeploy)
+[![Email](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=1F1F1F)](mailto:akilaskan@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=1F1F1F)](https://github.com/codedbyakil)
 
 </div>
 
 ---
 
-## ⭐ Support
+## ⭐ Support My Work
 
 If you find my projects helpful, please consider:
 
@@ -249,7 +250,7 @@ If you find my projects helpful, please consider:
 - ⭐ **Star my repositories** 
 - 🔗 **Share with others**
 - 💬 **Provide feedback**
-- 🤝 **Contribute or collaborate**
+- 🤝 **Collaborate together**
 
 ```
 Your support motivates me to keep building amazing things! 🚀
@@ -265,9 +266,9 @@ Your support motivates me to keep building amazing things! 🚀
 
 **Thanks for visiting my profile!** 
 
-*Last Updated: June 2026*
-
 *Making the web & mobile world better, one commit at a time* 🌟
+
+Made with ❤️ by **Akil** | Grade 12 Developer | June 2026
 
 </div>
 
@@ -275,6 +276,6 @@ Your support motivates me to keep building amazing things! 🚀
 
 <div align="center">
 
-[![Profile Views](https://komarev.com/ghpvc/?username=yourusername&color=blueviolet&style=flat-square&label=Profile+Views)](https://github.com/yourusername)
+[![Profile Views](https://komarev.com/ghpvc/?username=codedbyakil&color=blueviolet&style=flat-square&label=Profile+Views)](https://github.com/codedbyakil)
 
 </div>
